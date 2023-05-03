@@ -1,6 +1,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
+// eslint-disable-next-line @typescript-eslint/naming-convention
 const BASE_OUT_DIR = 'dist';
 const baseOutDir = path.resolve(BASE_OUT_DIR);
 

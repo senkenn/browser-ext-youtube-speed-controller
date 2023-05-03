@@ -16,7 +16,7 @@ import { WebStorage } from 'reduxjs-toolkit-persist/lib/types';
 import { default as counterReducer } from '../content/features/counter/counterSlice';
 
 const persistConfig = {
-  key: 'root',
+  key    : 'root',
   storage: localStorage as WebStorage,
 };
 
@@ -26,7 +26,7 @@ const reducers = combineReducers({
 
 const persistedReducer = persistReducer(persistConfig, reducers);
 const store = configureStore({
-  reducer: persistedReducer,
+  reducer   : persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
@@ -41,6 +41,7 @@ export const persistor = persistStore(store);
 
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
+// eslint-disable-next-line @typescript-eslint/naming-convention
 export type AppThunk<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,

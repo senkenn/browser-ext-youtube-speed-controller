@@ -8,9 +8,9 @@ import type { PluginOption } from 'vite';
 function removeSrcFromHtmlPaths(): PluginOption {
   let config;
   return {
-    name: 'remove-src-from-html-paths',
+    name   : 'remove-src-from-html-paths',
     enforce: 'post',
-    apply: 'build',
+    apply  : 'build',
 
     configResolved(resolvedConfig) {
       config = resolvedConfig;
@@ -21,6 +21,7 @@ function removeSrcFromHtmlPaths(): PluginOption {
       const manifestPath = resolve(outDir, 'manifest.json');
       const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf-8')); // TODO: typing
 
+      // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
       const processManifestKey = (key: string) => {
         const filePath = getKeyValue(manifest, key) as string;
         if (!filePath) return;

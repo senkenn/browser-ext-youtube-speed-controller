@@ -7,12 +7,12 @@ import counterReducer, {
 
 describe('counter reducer', () => {
   const initialState: CounterState = {
-    value: 3,
+    value : 3,
     status: 'idle',
   };
   it('should handle initial state', () => {
     expect(counterReducer(undefined, { type: 'unknown' })).toEqual({
-      value: 0,
+      value : 0,
       status: 'idle',
     });
   });

@@ -11,9 +11,12 @@ import {
   selectCount,
 } from './counterSlice';
 
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
 import styles from './Counter.module.css';
 
-export function Counter() {
+// eslint-disable-next-line @typescript-eslint/naming-convention
+export function Counter(): JSX.Element {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
