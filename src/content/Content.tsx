@@ -30,7 +30,7 @@ export async function bucketInitialization(): Promise<void> {
 
   const playbackRatesByCategoryId: PlayBackRatesByCategory = {} as PlayBackRatesByCategory;
   ObjectKeys(VIDEO_CATEGORIES).map((key) => {
-    playbackRatesByCategoryId[key] = 2;
+    playbackRatesByCategoryId[key] = 1;
   });
 
   bucket.set({

@@ -6,7 +6,6 @@ import { Store } from '@eduardoac-skimlinks/webext-redux';
 import { proxyStore as store } from '../app/proxyStore';
 
 import Content from './Content';
-import '../tailwind.css';
 
 withProxyStore(<Content />, store).then((component) => {
   const container = document.createElement('my-extension-root');
