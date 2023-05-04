@@ -11,7 +11,8 @@ type Controller = {
   plus: '＋';
 };
 export type Message = {
-  speed: number;
+  speed?: number;
+  url?: string;
 };
 const controller: Controller = {
   minus: 'ー',
